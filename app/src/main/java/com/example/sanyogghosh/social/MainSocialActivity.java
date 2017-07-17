@@ -123,7 +123,25 @@ public class MainSocialActivity extends AppCompatActivity {
 
 
 
-                        }}
+                        }
+                                if (password_received.equals(password)) {
+
+                                    Toast.makeText(getApplicationContext(), "Login Successfull", Toast.LENGTH_LONG).show();
+                                    Log.d("aa", "yes");
+                                    ProgressBar aaaaa = (ProgressBar) findViewById(R.id.progress);
+                                    aaaaa.setVisibility(View.GONE);
+
+                                    TextView dialog_alert = (TextView) findViewById(R.id.check_details_dialog);
+                                    dialog_alert.setVisibility(View.GONE);
+                                }
+
+
+
+
+
+
+
+                        }
                     }
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
@@ -207,4 +225,5 @@ public class MainSocialActivity extends AppCompatActivity {
 
     }
 }
+
 
