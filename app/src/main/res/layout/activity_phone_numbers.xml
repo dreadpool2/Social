@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sanyogghosh.social.PhoneNumbers">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:background="#1c9694"
+        android:elevation="10dp"
+        android:id="@+id/godown"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/phone_book"
+                android:id="@+id/phone_book"
+                android:layout_gravity="center"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/articles"
+                android:onClick="articles"
+                android:id="@+id/articles"
+                android:layout_gravity="center"
+                android:layout_height="30dp"  />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sanyogghosh.social.PhoneNumbers">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:id="@+id/toolbar"
+        android:background="#1c9694"
+        android:elevation="4dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="27dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_dehaze_white_36dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                android:text="Contacts"/>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/goforgood"
+    android:elevation="4dp"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="80dp"
+        android:background="#7b6cb4"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="#00ffffff"
+        android:elevation="4dp"
+        android:padding="10dp"
+
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content" 
+            android:text="&#187; Administration"
+            android:id="@+id/administration"
+            android:fontFamily="monospace0"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="&#187; Deans"
+            android:id="@+id/deans"
+
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/associate_deans"
+            android:text="&#187; Associate Deans"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/associate_deans_Off_Campus"
+            android:text="&#187; Professor in Charge"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/unit_chiefs"
+            android:text="&#187; Faculty in Charge(s)"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/faculty_in_charge"
+            android:text="&#187; Head of Department"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/heads_of_Departments"
+            android:text="&#187; Centre-Specific Contacts"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/wardens"
+            android:text="&#187; Incharge for General Functions"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/centre_specific_contacts"
+            android:text="&#187; Hostel Wardens"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="&#187; Issue-Specific Contacts"
+            android:id="@+id/issue_specific_contacts"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_height="?attr/actionBarSize"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/show_er"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_height="?attr/actionBarSize"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:background="#000000"
+        android:textStyle="bold"
+        android:layout_height="6dp"
+        />
+    <ProgressBar
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:id="@+id/progress2"/>
+<ListView
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:id="@+id/phone_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+</LinearLayout>
+</FrameLayout>

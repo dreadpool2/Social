@@ -1,0 +1,167 @@
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/akl"
+    tools:context="com.example.sanyogghosh.social.PhoneNumbers">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:background="#1c9694"
+        android:elevation="10dp"
+        android:id="@+id/godown"
+        android:layout_height="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/phone_book"
+                android:layout_gravity="center"
+                android:onClick="phonenumbers"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/articles"
+                android:layout_gravity="center"
+                android:layout_height="30dp"  />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/watch"
+                android:onClick="timings"
+                android:layout_gravity="center"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.sanyogghosh.social.PhoneNumbers">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:background="#1c9694"
+            android:elevation="4dp"
+            android:layout_height="wrap_content">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_dehaze_white_36dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="22sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="13dp"
+                    android:layout_gravity="center"
+                    android:text="Articles"/>
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_gravity="end"
+                    android:layout_height="30dp"/>
+
+
+            </LinearLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_gravity="end"
+        android:id="@+id/profilepic"
+        android:layout_marginRight="23dp"
+        android:layout_height="30dp"/>
+
+</FrameLayout>
+        </android.support.v7.widget.Toolbar>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:id="@+id/progress"/>
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/swipe"
+            android:layout_height="match_parent">
+
+        <ListView
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+
+            android:id="@+id/article_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:padding="4dp"
+    android:layout_marginBottom="11dp"
+    android:layout_height="wrap_content">
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/plus"
+        android:elevation="4dp"
+        android:id="@+id/add"
+        android:onClick="add"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+</FrameLayout>

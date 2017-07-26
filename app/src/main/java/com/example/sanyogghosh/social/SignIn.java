@@ -6,8 +6,10 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AnimationUtils;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.firebase.database.ChildEventListener;
@@ -32,6 +34,17 @@ public class SignIn extends AppCompatActivity {
 
         ProgressBar a = (ProgressBar)findViewById(R.id.progress);
         a.setVisibility(View.GONE);
+
+        Spinner spin_a = (Spinner)findViewById(R.id.spinner);
+
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.planets_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        spin_a.setAdapter(adapter);
+
 
         //username and password obtained
 
@@ -59,8 +72,8 @@ public class SignIn extends AppCompatActivity {
                 final String password = pass_word.getText().toString();
 
                 mMessagesDatabaseReference = mFirebaseDatabase.getReference().child("Profiles").child("Profile"+" "+username).child("Username");
-
-
+                DatabaseReference mM2=mFirebaseDatabase.getReference().child("Profiles").child("Profile"+" "+username).child("Voted Articles").child("Wow");
+                mM2.setValue(1);
                 mMessagesDatabaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot snapshot) {
@@ -130,4 +143,12 @@ public class SignIn extends AppCompatActivity {
         });
 
     }
+
+
+
+
+
+
+
+
 }

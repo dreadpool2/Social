@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
@@ -17,6 +19,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 
 
 public class MainSocialActivity extends AppCompatActivity {
@@ -35,6 +40,9 @@ public class MainSocialActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_social);
+
+        EditText j = (EditText)findViewById(R.id.password);
+        j.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
         ProgressBar aaa = (ProgressBar)findViewById(R.id.progress);
         aaa.setVisibility(View.GONE);
@@ -97,7 +105,6 @@ public class MainSocialActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot snapshot) {
                         password_received = snapshot.getValue(String.class);
-
                         if(password_received==null){
 
 
@@ -109,19 +116,50 @@ public class MainSocialActivity extends AppCompatActivity {
                             aaaa.setVisibility(View.GONE);
 
 
+                        }else{
+                        if(!password_received.equals(password)){
+
+
+                            TextView dialog_alert = (TextView)findViewById(R.id.check_details_dialog);
+                            dialog_alert.setVisibility(View.VISIBLE);
+                            dialog_alert.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.shake));
+
+                            ProgressBar aaaa = (ProgressBar)findViewById(R.id.progress);
+                            aaaa.setVisibility(View.GONE);
+
+
+
+
                         }
-                        else{
-                            if(k==2){
-                                Toast.makeText(getApplicationContext(),"Login Succesfull",Toast.LENGTH_LONG).show();
+                                if (password_received.equals(password)) {
 
-                                ProgressBar aaaaa = (ProgressBar)findViewById(R.id.progress);
-                                aaaaa.setVisibility(View.GONE);
+                                    Toast.makeText(getApplicationContext(), "Login Successfull", Toast.LENGTH_LONG).show();
+                                    Log.d("aa", "yes");
+                                    ProgressBar aaaaa = (ProgressBar) findViewById(R.id.progress);
+                                    aaaaa.setVisibility(View.GONE);
+                                    Intent i = new Intent(getApplicationContext(),PhoneNumbers.class);
+                                    startActivity(i);
 
-                                TextView dialog_alert = (TextView)findViewById(R.id.check_details_dialog);
-                                dialog_alert.setVisibility(View.GONE);
+                                    TextView dialog_alert = (TextView) findViewById(R.id.check_details_dialog);
+                                    dialog_alert.setVisibility(View.GONE);
 
 
-                            }
+                                    try {
+
+                                        FileOutputStream fileout = openFileOutput("my_username.txt", MODE_PRIVATE);
+                                        OutputStreamWriter outputWriter = new OutputStreamWriter(fileout);
+                                        outputWriter.write(username_received);
+                                        outputWriter.close();
+                                    } catch (Exception e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+
+
+
+
+
+
 
                         }
                     }
@@ -130,20 +168,9 @@ public class MainSocialActivity extends AppCompatActivity {
                     }
                 });
 
-               if(username_received==null){
-
-
-                   TextView dialog_alert = (TextView)findViewById(R.id.check_details_dialog);
-                   dialog_alert.setVisibility(View.VISIBLE);
-                   dialog_alert.startAnimation(AnimationUtils.loadAnimation(getApplicationContext(),R.anim.shake));
-
-
-                   ProgressBar aaaaa = (ProgressBar)findViewById(R.id.progress);
-                   aaaaa.setVisibility(View.GONE);
-
-
-               }
+               if(k==2){
                if(username_received!=null){
+
                 if(username_received.equals(username)){
                     if(!password_received.equals(password)){
 
@@ -168,6 +195,7 @@ public class MainSocialActivity extends AppCompatActivity {
                            ProgressBar aasa = (ProgressBar)findViewById(R.id.progress);
                            aasa.setVisibility(View.GONE);
 
+
                        }
 
                         if(password.equals("")){
@@ -183,18 +211,23 @@ public class MainSocialActivity extends AppCompatActivity {
 
                         }
                         else{
-                        Toast.makeText(getApplicationContext(),"Login Succesfull",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Login Successfull",Toast.LENGTH_LONG).show();
 
+                            Intent i = new Intent(getApplicationContext(),PhoneNumbers.class);
+                            startActivity(i);
+
+                        Log.d("aa","yes");
                             ProgressBar aaaaa = (ProgressBar)findViewById(R.id.progress);
                             aaaaa.setVisibility(View.GONE);
 
                         TextView dialog_alert = (TextView)findViewById(R.id.check_details_dialog);
-                        dialog_alert.setVisibility(View.GONE);}
+                        dialog_alert.setVisibility(View.GONE);
+                        }
                     }
 
 
 
-                }}
+                }}}
 
 
 

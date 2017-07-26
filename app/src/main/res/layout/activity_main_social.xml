@@ -21,7 +21,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/log_in"
-        android:background="#ffffff"
         android:paddingRight="62dp"
         android:paddingLeft="62dp"
         android:paddingTop="22dp"
@@ -45,6 +44,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:textSize="50sp"
+            android:textColor="#189714"
             android:fontFamily="monospace"
             android:textStyle="bold"
             android:text="Login"/>
@@ -66,6 +66,7 @@
             android:gravity="top"
             android:layout_weight="0.5"
             android:textSize="16sp"
+            android:padding="8dp"
             android:fontFamily="monospace"
             android:id="@+id/username"
             android:hint="Your Username"/>
@@ -83,13 +84,14 @@
         <EditText
             android:layout_width="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:layout_weight="0.5"
+            android:padding="8dp"
             android:textSize="16sp"
             android:fontFamily="monospace"
             android:id="@+id/password"
             android:hint="Your Password"/>
+
 
         <TextView
             android:layout_width="wrap_content"

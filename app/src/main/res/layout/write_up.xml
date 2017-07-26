@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#5cc13d"
+    tools:context="com.example.sanyogghosh.social.PhoneNumbers">
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:id="@+id/write"
+    tools:context="com.example.sanyogghosh.social.PhoneNumbers">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+<EditText
+    android:layout_width="match_parent"
+    android:hint="Heading Here"
+    android:textAlignment="center"
+    android:id="@+id/heada"
+    android:layout_height="wrap_content" />
+<ImageView
+    android:layout_width="80dp"
+    android:layout_gravity="center"
+    android:id="@+id/image2"
+    android:background="@drawable/rsz_night_time_in_new_york_wallpaper1080"
+    android:layout_height="80dp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:hint="Type Here"
+        android:textAlignment="center"
+        android:id="@+id/text_entered"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/done"
+        android:id="@+id/fab"
+        android:layout_margin="15dp"
+        android:layout_gravity="end"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_white_24dp"
+        android:id="@+id/fabg"
+        style="@style/hello"
+        android:onClick="fabr"
+        app:backgroundTint="#f51616"
+        android:layout_margin="15dp"
+        android:background="#e21212"
+        android:layout_gravity="start"/>
+</FrameLayout>
+</LinearLayout>

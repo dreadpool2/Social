@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_margin="8dp"
+    android:padding="2dp"
+    android:id="@+id/item"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:elevation="8dp"
+    android:id="@+id/back"
+    android:layout_margin="8dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+            android:layout_gravity="center|start"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#262222"
+        android:textSize="22sp"
+        android:textAlignment="textStart"
+        android:id="@+id/head"
+            android:padding="10dp"
+        android:fontFamily="serif"
+        android:text="The Bitsians Day"/>
+
+<LinearLayout
+    android:layout_width="60dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textStyle="bold"
+            android:onClick="favourite"
+            android:textColor="#262222"
+            android:textSize="22sp"
+            android:src="@drawable/star"
+            android:id="@+id/favourite"
+            />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="5"
+        android:id="@+id/favourite_count"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+        </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:textAlignment="center"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="serif"
+        android:textColor="#1a1dab"
+        android:id="@+id/divider"
+        android:background="#030305"
+       />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="serif"
+        android:background="@drawable/startshape"
+        android:padding="5dp"
+        android:layout_marginLeft="8dp"
+        android:text="17 JANUARY 2016"
+        android:textColor="#ffffff"
+        android:id="@+id/date"
+        android:gravity="start"
+        android:textSize="10sp"
+        />
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="20dp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:onClick="favourite"
+        android:textColor="#262222"
+        android:layout_gravity="center"
+        android:textSize="10sp"
+        android:src="@drawable/star"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textStyle="bold"
+        android:text=" By "
+        android:gravity="center_vertical"
+        android:onClick="favourite"
+        android:textColor="#707070"
+        android:layout_gravity="center"
+        android:textSize="10sp"
+        android:src="@drawable/star"
+        />
+    <TextView
+    android:id="@+id/author"
+    android:layout_width="0dp"
+    android:layout_weight="0.8"
+    android:layout_height="20dp"
+    android:textStyle="bold"
+    android:text="Sanyog Ghosh"
+    android:gravity="center_vertical"
+    android:onClick="favourite"
+    android:textColor="#262222"
+    android:layout_gravity="center"
+    android:textSize="10sp"
+    android:src="@drawable/star"
+    />
+</LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rsz_night_time_in_new_york_wallpaper1080"
+        android:layout_marginBottom="4dp"
+        android:adjustViewBounds="true"
+        android:id="@+id/picture"
+        android:background="@drawable/startshaape"
+        android:requiresFadingEdge="horizontal"
+        android:fitsSystemWindows="true"
+       />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/text1"
+        android:textSize="15sp"
+        android:layout_margin="4dp"
+        android:padding="4dp"
+        android:fontFamily="monospace"
+        android:text="Article"/>
+        <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="3dp"
+        android:fontFamily="monospace"
+        android:textColor="#ffffff"
+        android:background="#000000"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:layout_margin="10dp"
+        android:id="@+id/article_status"
+        android:text="ARTICLE"/>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_gravity="end|center"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:id="@+id/up_arrow"
+        android:src="@drawable/up_chevron_button"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center"
+        android:gravity="center"
+        android:textColor="#23832a"
+        android:layout_marginLeft="3dp"
+        android:fontFamily="monospace"
+        android:text="54"
+        android:layout_marginRight="8dp"
+        android:id="@+id/upvotes"
+        android:textSize="15sp"
+        />
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:id="@+id/down_arrow"
+        android:layout_marginRight="3dp"
+        android:src="@drawable/chevron_sign_down"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="monospace"
+        android:text="20"
+        android:id="@+id/downvotes"
+        android:textColor="#ff0000"
+        android:gravity="start"
+        android:textSize="15sp"
+        />
+</LinearLayout>
+</FrameLayout>
+</LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:id="@+id/height"
+        />
+    </LinearLayout>

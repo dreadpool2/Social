@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Social</string>
     <string name="signin"><u>Sign In</u></string>
-
+    <string-array name="planets_array">
+        <item>BITS Pilani</item>
+        <item>BITS Hyderabad</item>
+        <item>BITS Goa</item>
+    </string-array>
 </resources>
